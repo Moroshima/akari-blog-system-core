@@ -1,0 +1,20 @@
+{
+  "name": "akari-blog-system-core",
+  "version": "1.0.0",
+  "description": "the backend part of akari blog system",
+  "main": "app.ts",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "author": "Moroshima",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "mongoose": "^6.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}
