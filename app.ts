@@ -1,4 +1,5 @@
-const Koa = require("koa");
+import Koa from "koa"
+import controller from "./controller"
 const app = new Koa();
 const port = 8080;
 
@@ -18,10 +19,12 @@ app.use(async (ctx: any, next: any) => {
 });
 
 // response
-app.use(async (ctx: any) => {
-  ctx.response.body = "Hello World";
-  ctx.response.status = 201;
-});
+// app.use(async (ctx: any) => {
+//   ctx.response.body = "Hello World";
+//   ctx.response.status = 201;
+// });
+
+controller(app)
 
 console.log(`HTTP webserver running. Access it at: http://localhost:${port}/`);
 app.listen(port);
