@@ -1,17 +1,17 @@
-import Koa from "koa"
-import controller from "./controller"
+import Koa, { Context, Next } from "koa";
+import controller from "./controller/controller";
 const app = new Koa();
 const port = 8080;
 
 // logger
-app.use(async (ctx: any, next: any) => {
+app.use(async (ctx: Context, next: Next) => {
   await next();
   const rt = ctx.response.get("X-Response-Time");
   console.log(`${ctx.request.method} ${ctx.request.url} - ${rt}`);
 });
 
 // x-response-time
-app.use(async (ctx: any, next: any) => {
+app.use(async (ctx: Context, next: Next) => {
   const start = Date.now();
   await next();
   const ms = Date.now() - start;
@@ -24,7 +24,7 @@ app.use(async (ctx: any, next: any) => {
 //   ctx.response.status = 201;
 // });
 
-controller(app)
+controller(app);
 
-console.log(`HTTP webserver running. Access it at: http://localhost:${port}/`);
+console.log(`HTTP webserver running. Access it at: http://localhost:${port}/api/`);
 app.listen(port);

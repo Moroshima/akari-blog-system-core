@@ -1,10 +1,11 @@
+import { Context } from "koa";
 import Router from "koa-router";
 
-const test = new Router();
+const basic = new Router();
 
-test.get("/", (ctx: any, next: any) => {
-  ctx.response.body = "Hello World";
+basic.get("/", (ctx: Context) => {
+  ctx.response.body = "Hello World!";
   ctx.response.status = 201;
 });
 
-export { test };
+export { basic };

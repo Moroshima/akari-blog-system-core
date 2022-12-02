@@ -1,6 +1,7 @@
 {
   "name": "akari-blog-system-core",
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.0.1",
   "description": "the backend part of akari blog system",
   "main": "app.ts",
   "scripts": {
@@ -10,13 +11,14 @@
   "author": "Moroshima",
   "license": "MIT",
   "dependencies": {
-    "@types/koa": "^2.13.5",
-    "@types/koa-router": "^7.4.4",
     "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
     "koa-router": "^12.0.0",
     "mongoose": "^6.7.4"
   },
   "devDependencies": {
+    "@types/koa": "^2.13.5",
+    "@types/koa-router": "^7.4.4",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
