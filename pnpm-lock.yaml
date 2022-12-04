@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/koa': ^2.13.5
+  '@types/koa-bodyparser': ^4.3.10
   '@types/koa-router': ^7.4.4
   '@types/node': ^18.11.9
   '@typescript-eslint/eslint-plugin': ^5.45.0
@@ -23,6 +24,7 @@ dependencies:
 
 devDependencies:
   '@types/koa': 2.13.5
+  '@types/koa-bodyparser': 4.3.10
   '@types/koa-router': 7.4.4
   '@types/node': 18.11.9
   '@typescript-eslint/eslint-plugin': 5.45.0_czs5uoqkd3podpy6vgtsxfc7au
@@ -994,6 +996,12 @@ packages:
 
   /@types/keygrip/1.0.2:
     resolution: {integrity: sha512-GJhpTepz2udxGexqos8wgaBx4I/zWIDPh/KOGEwAqtuGDkOUJu5eFvwmdBX4AmB8Odsr+9pHCQqiAqDL/yKMKw==}
+    dev: true
+
+  /@types/koa-bodyparser/4.3.10:
+    resolution: {integrity: sha512-6ae05pjhmrmGhUR8GYD5qr5p9LTEMEGfGXCsK8VaSL+totwigm8+H/7MHW7K4854CMeuwRAubT8qcc/EagaeIA==}
+    dependencies:
+      '@types/koa': 2.13.5
     dev: true
 
   /@types/koa-compose/3.2.5:
