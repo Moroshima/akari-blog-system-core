@@ -1,20 +1,20 @@
 import Koa, { Context, Next } from "koa";
 import mongoose from "mongoose";
-import controller from "./controller/controller";
+import routes from "./routes";
 import bodyParser from "koa-bodyparser";
 
 const app = new Koa();
 const port = 8080;
 
-async function connection() {
-  await mongoose.connect("mongodb://localhost:27017/local");
-}
+// async function connection() {
+//   await mongoose.connect("mongodb://localhost:27017/local");
+// }
 
-connection()
-  .then(() => {
-    console.log("Connection to MongoDB database established");
-  })
-  .catch((err) => console.log(err));
+// connection()
+//   .then(() => {
+//     console.log("Connection to MongoDB database established");
+//   })
+//   .catch((err) => console.log(err));
 
 // logger
 app.use(async (ctx: Context, next: Next) => {
@@ -39,7 +39,7 @@ app.use(bodyParser());
 //   ctx.response.status = 201;
 // });
 
-controller(app);
+routes(app);
 
 console.log(
   `HTTP webserver running. Access it at: http://localhost:${port}/api/`

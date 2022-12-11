@@ -1,5 +1,5 @@
-import { basic } from "./basic.controller";
-import { blog } from "./blog.controller";
+import basicRouter from "./basicRoutes";
+import publicRouter from "./publicRoutes";
 import Router from "koa-router";
 import Application from "koa";
 
@@ -7,8 +7,8 @@ const router = new Router();
 
 router.prefix("/api");
 router
-  .use("/", basic.routes(), basic.allowedMethods())
-  .use("/blog", blog.routes(), blog.allowedMethods());
+  .use("/", basicRouter.routes(), basicRouter.allowedMethods())
+  .use("/blog", publicRouter.routes(), publicRouter.allowedMethods());
 
 export default function (app: Application) {
   app.use(router.routes()).use(router.allowedMethods());

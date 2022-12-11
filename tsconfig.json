@@ -1,5 +1,14 @@
 {
-  "include": ["app.ts", "controller/**/*"],
+  "include": [
+    "app.ts",
+    "config/**/*",
+    "controllers/**/*",
+    "dao/**/*",
+    "models/**/*",
+    "routes/**/*",
+    "services/**/*",
+    "utils/**/*"
+  ],
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
