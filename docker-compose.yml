@@ -1,0 +1,30 @@
+version: '0.0.1-alpha.0.1'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: akari-core
+    ports:
+      - "8080:8080"
+    networks:
+      - network
+    depends_on:
+      - database
+
+  database:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - network
+    volumes:
+      - database-volume:/data/db
+
+volumes:
+  database-volume:
+
+networks:
+  network:

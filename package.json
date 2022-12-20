@@ -6,26 +6,31 @@
   "main": "app.ts",
   "scripts": {
     "dev": "nodemon",
-    "lint": "eslint **/*.ts"
+    "lint": "eslint **/*.ts",
+    "build": "tsc",
+    "pack:dev": "webpack --mode=development",
+    "pack:prod": "webpack --mode=production"
   },
   "author": "Moroshima",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.13.4",
+    "koa": "^2.14.1",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^12.0.0",
-    "mongoose": "^6.7.4"
+    "mongoose": "^6.8.0",
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "@types/koa": "^2.13.5",
     "@types/koa-bodyparser": "^4.3.10",
     "@types/koa-router": "^7.4.4",
-    "@types/node": "^18.11.9",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
-    "eslint": "^8.28.0",
+    "@types/node": "^18.11.17",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.30.0",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.3"
+    "tsconfig-paths": "^4.1.1",
+    "typescript": "^4.9.4"
   }
 }

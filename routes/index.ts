@@ -1,5 +1,5 @@
-import basicRouter from "./basicRoutes";
-import publicRouter from "./publicRoutes";
+import basicRouter from "@routes/basicRoutes";
+import publicRouter from "@routes/publicRoutes";
 import Router from "koa-router";
 import Application from "koa";
 
