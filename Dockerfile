@@ -1,6 +1,6 @@
 FROM node:18-slim
 LABEL author="Moroshima <2524332942aliez@gmail.com>"
-LABEL version="0.0.1-alpha.1.0"
+LABEL version="1.0.0-alpha"
 
 
 ENV NODE_ENV=production
