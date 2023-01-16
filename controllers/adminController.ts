@@ -1,7 +1,7 @@
 import { Context } from "koa";
 import Joi from "joi";
 import axios from "axios";
-import captcha from "@config/captcha";
+import config from "@config/index";
 import { createAdmin } from "@dao/adminDao";
 
 const loginSchema = Joi.object({
@@ -27,7 +27,7 @@ async function login(ctx: Context) {
     console.log(body);
 
     const params = new URLSearchParams();
-    params.append("secret", captcha.grecaptcha_secret);
+    params.append("secret", config.grecaptcha_secret);
     params.append("response", body.grecaptcha_token);
     await axios
       .post("https://www.google.com/recaptcha/api/siteverify", params, {

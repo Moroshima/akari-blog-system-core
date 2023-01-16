@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# configuration
+config/index.ts
+
 # build
 /build
 
