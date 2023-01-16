@@ -10,7 +10,13 @@ module.exports = {
   target: "node",
   resolve: {
     alias: {
+      "@config": path.resolve(__dirname, "build/config/"),
+      "@controllers": path.resolve(__dirname, "build/controllers/"),
+      "@dao": path.resolve(__dirname, "build/dao/"),
+      "@models": path.resolve(__dirname, "build/models/"),
       "@routes": path.resolve(__dirname, "build/routes/"),
+      "@services": path.resolve(__dirname, "build/services/"),
+      "@utils": path.resolve(__dirname, "build/utils/"),
     },
   },
 };

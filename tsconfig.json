@@ -20,8 +20,13 @@
     "outDir": "build",
     "baseUrl": ".",
     "paths": {
+      "@config/*": ["config/*"],
+      "@controllers/*": ["controllers/*"],
+      "@dao/*": ["dao/*"],
+      "@models/*": ["models/*"],
       "@routes/*": ["routes/*"],
-      "@": ["."]
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"]
     }
   }
 }
